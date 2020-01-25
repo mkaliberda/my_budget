@@ -2,7 +2,7 @@ from flask import Flask
 from flask.views import MethodView
 from flask_smorest import Api, Blueprint, abort
 from .schema import TransactionSchema
-from .model import Transaction
+from .model import TransactionModel, TransactionType
 
 tx_blueprint = Blueprint("TransactionSchema",
                         "transaction",
@@ -10,9 +10,10 @@ tx_blueprint = Blueprint("TransactionSchema",
                         description="transactions")
 
 @tx_blueprint.route('/')
-class Pets(MethodView):
+class TransactionView(MethodView):
 
     @tx_blueprint.response(TransactionSchema(many=True))
     def get(self):
         """ List """
-        return Transaction.query.all()
+        # TODO SHOULD PROVIDE SERVICE
+        return TransactionModel.query.all()

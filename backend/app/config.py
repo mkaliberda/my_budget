@@ -18,8 +18,8 @@ class DevelopmentConfig(BaseConfig):
     DEBUG = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     TESTING = False
-    # SQLALCHEMY_DATABASE_URI = f"sqlite:///{basedir}/app-dev.db"
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://homestead:secret@localhost:3306/homestead'
+    SQLALCHEMY_DATABASE_URI = f"sqlite:///{basedir}/app-dev.db"
+    # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://homestead:secret@localhost:3306/homestead'
 
 
 class ProductionConfig(BaseConfig):

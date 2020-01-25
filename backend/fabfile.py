@@ -6,5 +6,3 @@ env = os.getenv("APP_ENV")
 print(f"Active environment: * {env} *")
 app = create_app(env)
 
-def seed_db():
-    SeedCommand().run()

@@ -1,5 +1,5 @@
 
-from .model import Transaction 
+from .model import TransactionModel, TransactionType
 from .schema import  TransactionSchema
 
 BASE_ROUTE=''
